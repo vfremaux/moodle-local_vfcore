@@ -24,3 +24,5 @@
 $string['privacy:metadata'] = 'The Local VFLibs plugin does not store any personal data about any user.';
 
 $string['pluginname'] = 'Extra core add-ons VF plugins';
+
+include(__DIR__.'/pro_additional_strings.php');

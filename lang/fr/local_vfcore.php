@@ -24,3 +24,5 @@
 $string['privacy:metadata'] = 'Le plugin VFCore ne détient pas de données utilisateur.';
 
 $string['pluginname'] = 'Surcharges core pour les plugins VF (MyLearningFactory)';
+
+include(__DIR__.'/pro_additional_strings.php');
