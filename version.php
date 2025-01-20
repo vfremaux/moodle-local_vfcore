@@ -26,13 +26,13 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version  = 2024053100;   // The (date) version of this plugin.
-$plugin->requires = 2020060900;   // Requires this Moodle version.
+$plugin->version  = 2025130100;   // The (date) version of this plugin.
+$plugin->requires = 2022112801;   // Requires this Moodle version.
 $plugin->component = 'local_vfcore';
-$plugin->release = '3.9.0 (Build 2024053100)';   // Release.
+$plugin->release = '4.5.0 (Build 2024053100)';   // Release.
 $plugin->maturity = MATURITY_STABLE;
-$plugin->supported = [39, 311];
+$plugin->supported = [401, 405];
 
 // Non moodle attributes.
-$plugin->codeincrement = '3.9.0002';
+$plugin->codeincrement = '4.5.0002';
 $plugin->privacy = 'dualrelease';
