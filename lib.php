@@ -14,14 +14,20 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/*
+/**
+ * General library.
+ *
  * @package    local_vfcore
- * @category   local
  * @author     Valery Fremaux <valery.fremaux@gmail.com>, Florence Labord <info@expertweb.fr>
  * @copyright  Valery Fremaux <valery.fremaux@gmail.com> (ActiveProLearn.com)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
  */
 
+/**
+ * Tells which features are supported against distribution.
+ * @param string $feature
+ * @param bool $getsupported
+ */
 function local_vfcore_supports_feature($feature = null, $getsupported = false) {
     global $CFG;
     static $supports;
