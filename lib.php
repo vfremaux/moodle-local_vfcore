@@ -23,6 +23,12 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
  */
 
+define('LOCAL_VFCORE_TRACE_ERRORS', 1); // Errors should be always traced when trace is on.
+define('LOCAL_VFCORE_TRACE_NOTICE', 3); // Notices are important notices in normal execution.
+define('LOCAL_VFCORE_TRACE_DEBUG', 5); // Debug are debug time notices that should be burried in debug_fine level when debug is ok.
+define('LOCAL_VFCORE_TRACE_DATA', 8); // Data level is when requiring to see data structures content.
+define('LOCAL_VFCORE_TRACE_DEBUG_FINE', 10); // Debug fine are control points we want to keep when code is refactored and debug needs to be reactivated.
+
 /**
  * Tells which features are supported against distribution.
  * @param string $feature
@@ -80,4 +86,17 @@ function local_vfcore_supports_feature($feature = null, $getsupported = false) {
     }
 
     return $versionkey;
+}
+
+/**
+ * A wrapper to APL debug. Do not use trace constants here because they may be not installed.
+ * @param string $msg
+ * @param int $level
+ * @param string $label
+ * @param int $backtracelevel
+ */
+function local_vfcore_debug_trace($msg, $level = LOCAL_VFCORE_TRACE_NOTICE, $label = '', $backtracelevel = 1) {
+    if (function_exists('debug_trace')) {
+        debug_trace($msg, $level, $label, $backtracelevel + 1);
+    }
 }
